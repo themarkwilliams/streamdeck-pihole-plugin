@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Pi-hole Documentation
+    url: https://docs.pi-hole.net/
+    about: Pi-hole setup and configuration help
