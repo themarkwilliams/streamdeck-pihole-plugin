@@ -1,4 +1,4 @@
-# Pi-hole Stream Deck Plugin
+# Pi-hole Controller
 
 Control and monitor your [Pi-hole v6](https://pi-hole.net/) directly from your Elgato Stream Deck.
 
@@ -20,7 +20,8 @@ Control and monitor your [Pi-hole v6](https://pi-hole.net/) directly from your E
 
 ## Requirements
 
-- Elgato Stream Deck software
+- Elgato Stream Deck software 6.9 or later
+- Windows 10+ or macOS 13+
 - Pi-hole v6 or later
 - A Pi-hole **App Password** (Settings → API → App Passwords in the Pi-hole admin UI)
 
