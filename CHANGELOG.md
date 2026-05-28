@@ -4,6 +4,29 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [1.0.6.0] - 2026-05-28
+
+### Fixed
+- Leading/trailing whitespace in the Host and App Password fields is now automatically trimmed — prevents 401 errors caused by accidental copy-paste spaces
+- `http://` or `https://` prefix and any trailing path (e.g. `/admin`) in the Host field are now automatically stripped — pasting a full URL works correctly
+
+### Changed
+- App Password hint in the property inspector now clarifies to copy without spaces and to leave the field blank if Pi-hole has no password set
+
+---
+
+## [1.0.5.0] - 2026-03-26
+
+### Fixed
+- Fixed plugin creating multiple orphaned Pi-hole sessions over time
+- Removed erroneous 5-minute in-memory session expiry that caused re-authentication on every period of inactivity — session now remains valid for its full Pi-hole lifetime (~30 days)
+- Old session is now explicitly deleted via `DELETE /auth` before a new one is created, preventing session accumulation on Pi-hole
+
+### Changed
+- Manifest Author updated to "Marktastic"
+
+---
+
 ## [1.0.4.0] - 2026-03-24
 
 ### Fixed
