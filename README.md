@@ -23,7 +23,7 @@ Control and monitor your [Pi-hole v6](https://pi-hole.net/) directly from your E
 - Elgato Stream Deck software 6.9 or later
 - Windows 10+ or macOS 13+
 - Pi-hole v6 or later
-- A Pi-hole **App Password** (Settings → API → App Passwords in the Pi-hole admin UI)
+- A Pi-hole **App Password** (Settings → Web Interface/API → Expert → App Passwords). Leave the App Password field blank if your Pi-hole has no password set.
 
 ---
 
@@ -36,7 +36,7 @@ Install from the [Elgato Marketplace](https://marketplace.elgato.com/product/pi-
 ## Setup
 
 1. Install **Pi-hole Controller** from the Elgato Marketplace.
-2. In your Pi-hole admin UI, go to **Settings → API → App Passwords** and create a new App Password.
+2. In your Pi-hole admin UI, go to **Settings → Web Interface/API → Expert → App Passwords** and create a new App Password. If your Pi-hole has no password set, skip this step and leave the App Password field blank.
 3. Add any Pi-hole Controller button to your Stream Deck profile.
 4. In the Property Inspector (right panel), enter:
    - **Host** — your Pi-hole's IP address or hostname (e.g. `pi.hole` or `192.168.1.2`)
