@@ -4,6 +4,22 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [1.0.7.0] - 2026-11-18
+
+### Fixed
+- Test Connection now shows Pi-hole's own reason when it can't log in, instead of only `HTTP 401: Unauthorized`
+- HTTPS with **Ignore SSL Errors** now reuses one connection instead of opening a new one on every refresh
+- Test Connection no longer leaves the previous Pi-hole session open. Each click used to add another session, and enough of them could fill Pi-hole's session limit
+
+### Changed
+- When Pi-hole says the password is incorrect, the property inspector shows the app password steps, including the easy-to-miss **Enable new app password** → **Save & Apply**
+- If you used the main web password with 2FA turned on, Test Connection says so and suggests an app password (app passwords don't need a 2FA code)
+- If something other than Pi-hole answers on that address (for example a router or a reverse proxy login), Test Connection says it doesn't look like Pi-hole and what to check
+- Network problems now say what went wrong instead of "fetch failed": connection refused, host not found, an untrusted HTTPS certificate (with a hint to turn on Ignore SSL Errors), or HTTPS not matching the port
+- Security updates to bundled libraries (undici, ws, Stream Deck SDK 2.1.2)
+
+---
+
 ## [1.0.6.0] - 2026-05-28
 
 ### Fixed

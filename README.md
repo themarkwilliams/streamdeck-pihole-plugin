@@ -23,7 +23,7 @@ Control and monitor your [Pi-hole v6](https://pi-hole.net/) directly from your E
 - Elgato Stream Deck software 6.9 or later
 - Windows 10+ or macOS 13+
 - Pi-hole v6 or later
-- A Pi-hole **App Password** (Settings → Web Interface/API → Expert → App Passwords). Leave the App Password field blank if your Pi-hole has no password set.
+- A Pi-hole **App Password** (Settings → Web interface / API, Expert mode → Configure app password, then **Enable new app password** and **Save & Apply**). Leave the App Password field blank if your Pi-hole has no password set.
 
 ---
 
@@ -36,7 +36,7 @@ Install from the [Elgato Marketplace](https://marketplace.elgato.com/product/pi-
 ## Setup
 
 1. Install **Pi-hole Controller** from the Elgato Marketplace.
-2. In your Pi-hole admin UI, go to **Settings → Web Interface/API → Expert → App Passwords** and create a new App Password. If your Pi-hole has no password set, skip this step and leave the App Password field blank.
+2. In your Pi-hole admin UI, go to **Settings → Web interface / API**, switch to **Expert** mode and click **Configure app password**. Copy the new password, then click **Enable new app password** and **Save & Apply**: the password doesn't work until you do. Making a new app password replaces the old one. If your Pi-hole has no password set, skip this step and leave the App Password field blank.
 3. Add any Pi-hole Controller button to your Stream Deck profile.
 4. In the Property Inspector (right panel), enter:
    - **Host** — your Pi-hole's IP address or hostname (e.g. `pi.hole` or `192.168.1.2`)
@@ -48,6 +48,12 @@ Install from the [Elgato Marketplace](https://marketplace.elgato.com/product/pi-
 > **Using HTTPS?** Check the HTTPS box and the port will update to 443 automatically. Works with reverse proxies (Nginx, Caddy, etc.).
 
 > **Self-signed certificate?** Check **Ignore SSL Errors** to bypass certificate validation — useful for home lab setups with a local CA or self-signed cert.
+
+### If Test Connection fails
+
+- **"Pi-hole says the password is incorrect"**: the app password was never applied (click **Enable new app password**, then **Save & Apply**), it was replaced by a newer one, or it picked up extra characters when pasted. If your Pi-hole has no password, leave the field blank.
+- **"Pi-hole wants a 2FA code"**: that's your main web password with two-factor login turned on. Use an app password instead; it doesn't need a 2FA code.
+- **"This doesn't look like Pi-hole's API"**: something else answered, such as your router, a reverse proxy with its own login, or another service on that port. Check Host, Port and HTTPS.
 
 ---
 
